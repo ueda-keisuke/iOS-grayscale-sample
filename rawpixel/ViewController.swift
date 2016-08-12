@@ -49,10 +49,11 @@ class ViewController: UIViewController {
             
         }
         
-        let img = imageFromRGBA32Bitmap(data.pixelValues!, width: data.width, height: data.height)
-        
-        image.image = img
-        
+        if let pixelValues = data.pixelValues
+        {
+            let img = imageFromRGBA32Bitmap(pixelValues, width: data.width, height: data.height)
+            image.image = img
+        }
     }
     
     
