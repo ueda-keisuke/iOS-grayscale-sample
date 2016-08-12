@@ -46,7 +46,6 @@ class ViewController: UIViewController {
             data.pixelValues![count + 1] = UInt8(gray)
             data.pixelValues![count + 2] = UInt8(gray)
             data.pixelValues![count + 3] = UInt8(a)
-            
         }
         
         if let pixelValues = data.pixelValues
@@ -96,7 +95,7 @@ class ViewController: UIViewController {
         
         var data = pixels // Copy to mutable []
         let providerRef = CGDataProviderCreateWithCFData(
-            NSData(bytes: &data, length: data.count * sizeof([UInt8]))
+            NSData(bytes: &data, length: data.count * sizeof(UInt8))
         )
         
         let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
