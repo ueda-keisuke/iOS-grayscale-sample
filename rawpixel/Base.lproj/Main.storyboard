@@ -25,15 +25,24 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uc5-Xd-jfW">
-                                <rect key="frame" x="277" y="550" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="266" y="550" width="68" height="30"/>
+                                <state key="normal" title="Grayscale"/>
                                 <connections>
                                     <action selector="click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qF4-q7-cdB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSZ-Ho-qgK">
+                                <rect key="frame" x="277" y="500" width="47" height="30"/>
+                                <state key="normal" title="Reload"/>
+                                <connections>
+                                    <action selector="reload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7AF-km-DKB"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="eSZ-Ho-qgK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2b8-9X-RQk"/>
+                            <constraint firstItem="Uc5-Xd-jfW" firstAttribute="top" secondItem="eSZ-Ho-qgK" secondAttribute="bottom" constant="20" id="K3V-cE-zlD"/>
                             <constraint firstItem="twK-Rh-ev5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VP2-Lb-KXx"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Uc5-Xd-jfW" secondAttribute="bottom" constant="20" id="bny-7Y-SIg"/>
                             <constraint firstItem="Uc5-Xd-jfW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fcl-b2-gAr"/>

@@ -49,13 +49,16 @@ class ViewController: UIViewController {
             
         }
         
-        let img = imageFromARGB32Bitmap(data.pixelValues!, width: data.width, height: data.height)
+        let img = imageFromRGBA32Bitmap(data.pixelValues!, width: data.width, height: data.height)
         
         image.image = img
         
     }
     
     
+    @IBAction func reload(sender: AnyObject) {
+        image.image = UIImage(named: "cat")
+    }
     
     func intensityValuesFromImage(image: UIImage?) -> (pixelValues: [UInt8]?, width: Int, height: Int)
     {
@@ -83,7 +86,7 @@ class ViewController: UIViewController {
         return (pixelValues, width, height)
     }
     
-    func imageFromARGB32Bitmap(pixels:[UInt8], width:Int, height:Int)-> UIImage? {
+    func imageFromRGBA32Bitmap(pixels:[UInt8], width:Int, height:Int)-> UIImage? {
         let bitsPerComponent: Int = 8
         let bitsPerPixel: Int = 32
         let bpp = 4
