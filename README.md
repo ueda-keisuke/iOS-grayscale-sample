@@ -2,6 +2,8 @@
 
 This sample demonstrates how to get raw pixel data as array from UIImage, make the data grayscale, and put the data back in UIImage in Swift. 
 
+このサンプルはUIImageのピクセルデータを直接操作します。一例として取得したデータをグレイスケールに変換してUIImageに戻しています。
+
         0.stride(to: data.width * data.height * 4, by: 4).forEach
         {
             let count = $0
