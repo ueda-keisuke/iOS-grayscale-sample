@@ -95,7 +95,7 @@ class ViewController: UIViewController {
         
         var data = pixels // Copy to mutable []
         let providerRef = CGDataProviderCreateWithCFData(
-            NSData(bytes: &data, length: data.count * sizeof([UInt8]) * bpp)
+            NSData(bytes: &data, length: data.count * sizeof([UInt8]))
         )
         
         let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
